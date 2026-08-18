@@ -81,10 +81,10 @@ export const PROJECTS: Project[] = [
     subtitle: 'Offline Indigenous Ecological Knowledge RAG Assistant',
     category: 'ai-llm',
     categoryLabel: 'AI & LLM / RAG',
-    badge: 'Capstone · University Lead',
+    badge: 'Capstone · Team Project · Client Delivery',
     featured: false,
     shortDesc: 'Offline LLM chatbot preserving traditional ecological knowledge for an indigenous community in Bangladesh. Runs entirely on local hardware — zero internet dependency.',
-    fullDesc: 'Developed as a university capstone project, TEK Climate System preserves sacred indigenous agricultural and ecological knowledge. Operating in remote regions without cellular or internet infrastructure, the entire pipeline runs locally on edge devices. Designed a quantized local RAG architecture using ChromaDB and all-MiniLM-L6-v2 embeddings paired with local Phi-4 14B and Mistral 7B via Ollama.',
+    fullDesc: 'Developed as a university capstone project, TEK Climate System preserves sacred indigenous agricultural and ecological knowledge. Operating in remote regions without cellular or internet infrastructure, the entire pipeline runs locally on edge devices. Designed a quantized local RAG architecture using ChromaDB and all-MiniLM-L6-v2 embeddings paired with local Phi-4 14B and Mistral 7B via Ollama. Delivered as part of a small team under project supervision, working directly with the client throughout — real requirements-gathering, iteration, and stakeholder communication rather than a purely academic exercise.',
     architecture: 'Local Edge Machine ➔ ChromaDB Vector Store (all-MiniLM-L6-v2) ➔ Ollama Local Model Runtime (Phi-4 14B / Mistral 7B) ➔ Flask API ➔ SQLite local persistence ➔ Containerized with Docker.',
     status: 'Delivered & Evaluated: Evaluated latency/accuracy trade-offs between Mistral 7B and Phi-4 14B; completed sprint documentation and live client demos for indigenous community representatives.',
     keyMetrics: [
@@ -108,7 +108,8 @@ export const PROJECTS: Project[] = [
     highlights: [
       'Architected 100% offline RAG retrieval system running on standard consumer hardware with zero telemetry or cloud dependency.',
       'Benchmarked quantized Mistral 7B vs. Phi-4 14B across multilingual query understanding and ecological hallucination rates.',
-      'Authored comprehensive technical documentation, edge deployment manuals, and led stakeholder demo sessions.'
+      'Authored comprehensive technical documentation, edge deployment manuals, and led stakeholder demo sessions.',
+      'Worked within a supervised, client-facing team from requirements through delivery — direct experience in professional client management, not just solo coursework.'
     ]
   },
   {

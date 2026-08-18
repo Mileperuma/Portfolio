@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
       'GitHub Actions',
       'Vercel & Render'
     ],
-    githubUrl: 'https://github.com/Mileperuma',
+    githubUrl: 'https://github.com/Mileperuma/Luminary',
     highlights: [
       'Engineered sub-300ms vector similarity lookup over cross-media catalogues using pgvector HNSW index.',
       'Implemented automated multi-stage GitHub Actions CI/CD with strict linting, pytest suites, and preview environment builds.',
@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
       'SQLite',
       'Python'
     ],
-    githubUrl: 'https://github.com/Mileperuma',
+    githubUrl: 'https://github.com/Mileperuma/LLM-Climate-Chatbot',
     highlights: [
       'Architected 100% offline RAG retrieval system running on standard consumer hardware with zero telemetry or cloud dependency.',
       'Benchmarked quantized Mistral 7B vs. Phi-4 14B across multilingual query understanding and ecological hallucination rates.',
@@ -175,7 +175,7 @@ export const PROJECTS: Project[] = [
       'SQLite',
       'Python'
     ],
-    githubUrl: 'https://github.com/Mileperuma',
+    githubUrl: 'https://github.com/Mileperuma/Personal-Finance-Categoriser',
     highlights: [
       'Trained and evaluated Multinomial Naive Bayes model with n-gram tokenization achieving 100% validation accuracy.',
       'Engineered interactive financial analytics dashboard with monthly breakdown charts and trend lines in Recharts.',
@@ -211,7 +211,7 @@ export const PROJECTS: Project[] = [
       'Python',
       'NumPy'
     ],
-    githubUrl: 'https://github.com/Mileperuma',
+    githubUrl: 'https://github.com/Mileperuma/Intelligent-Systems-Project-1',
     highlights: [
       'Systematically evaluated Recurrent Neural Architectures (SimpleRNN vs. LSTM vs. Bidirectional GRU) against ARIMA statistical baselines.',
       'Created multi-step lookahead horizon generator predicting 5 trading days into the future.',
@@ -247,7 +247,7 @@ export const PROJECTS: Project[] = [
       'joblib',
       'PE Headers'
     ],
-    githubUrl: 'https://github.com/Mileperuma',
+    githubUrl: 'https://github.com/Mileperuma/ai4cyber',
     highlights: [
       'Extracted raw Portable Executable structural attributes (sections, entropy, imports) for binary malware classification.',
       'Compared multiple classification kernels (Linear SVM vs. Tree Ensembles) with detailed confusion matrix analysis.',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 import { Project } from '../types';
 
@@ -19,14 +19,22 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
 
         <div className="border-t border-[var(--line)]">
           {PROJECTS.map((project, i) => (
-            <motion.button
+            <motion.div
               key={project.id}
+              role="button"
+              tabIndex={0}
               onClick={() => onSelectProject(project)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onSelectProject(project);
+                }
+              }}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: Math.min(i * 0.06, 0.3) }}
-              className="group w-full text-left border-b border-[var(--line)] py-7 sm:py-8 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 transition-colors duration-300 hover:bg-[var(--paper-soft)] px-3 -mx-3 sm:px-4 sm:-mx-4 rounded-md"
+              className="group w-full text-left border-b border-[var(--line)] py-7 sm:py-8 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 transition-colors duration-300 hover:bg-[var(--paper-soft)] px-3 -mx-3 sm:px-4 sm:-mx-4 rounded-md cursor-pointer"
             >
               <span className="text-xs text-[var(--ink-faint)] tabular-nums sm:w-12 shrink-0">
                 {project.number.split(' / ')[0]}
@@ -49,11 +57,25 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
                 </p>
               </div>
 
-              <ArrowUpRight
-                size={20}
-                className="text-[var(--ink-faint)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 hidden sm:block"
-              />
-            </motion.button>
+              <div className="flex items-center gap-4 shrink-0 pl-1 sm:pl-0">
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    title="View repository"
+                    className="text-[var(--ink-faint)] hover:text-[var(--accent)] transition-colors p-1 -m-1"
+                  >
+                    <Github size={17} />
+                  </a>
+                )}
+                <ArrowUpRight
+                  size={20}
+                  className="text-[var(--ink-faint)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 hidden sm:block"
+                />
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
